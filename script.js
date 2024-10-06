@@ -1,7 +1,5 @@
 import * as THREE from 'three';
 import { OrbitControls } from 'three/addons/controls/OrbitControls.js';
-import { GLTFLoader } from 'three/addons/loaders/GLTFLoader.js';
-// import { PDBLoader } from 'three/addons/loaders/PDBLoader.js';
 
 class HydrogenAtom
 {   constructor()
@@ -61,7 +59,6 @@ class App
         this.onWindowResize = this.onWindowResize.bind(this);
         this.animate = this.animate.bind(this);
         this.controls = new OrbitControls( this.camera, this.renderer.domElement );
-        this.loader = new GLTFLoader();
     }
 
     init()
@@ -90,9 +87,6 @@ class App
         spotLight.decay = 2;
 	    spotLight.distance = 0;
         this.scene.add( spotLight );
-
-        // const spotLightHelper = new THREE.SpotLightHelper( spotLight );
-        // this.scene.add( spotLightHelper );
 
         this.scene.background = new THREE.Color( 0x0D0D3D );
 
