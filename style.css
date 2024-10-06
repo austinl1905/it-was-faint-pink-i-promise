@@ -1,9 +1,27 @@
 @import url('https://fonts.googleapis.com/css2?family=Oswald:wght@200..700&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Anton&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Luxurious+Script&display=swap');
 
+@keyframes fadein
+{   from {opacity: 0;}
+    to {opacity: 1;}
+}
+
+@keyframes popout
+{   from {transform: scale(1);}
+    to {transform: scale(1.1);}
+}
+
+
 body
 {   margin: 0;
     padding: 0;
+}
+
+.paragraphText
+{   font-size: 1.3rem;
+    font-family: 'Roboto', sans-serif;
+    color: #7d7d7d;
+    overflow-wrap: break-word;
 }
 
 .headerWrapper
@@ -35,7 +53,7 @@ body
 }
 
 .headerLine
-{   color: #CFCEEB;
+{   color: #cfe2f3;
     width: 80%;
     margin-left: auto;
     margin-right: auto;
@@ -47,7 +65,7 @@ body
     /* color: #CFCEEB; */
     /* color: #17166E; */
     color: transparent;
-    -webkit-text-stroke: 6px #CFCEEB;
+    -webkit-text-stroke: 6px #cfe2f3;
     letter-spacing: 10px;
     /* background-color: #17166E; */
     font-size: 96px;
@@ -59,7 +77,7 @@ body
 
 #headerH2
 {   font-family: 'Oswald', sans-serif;
-    color: #CFCEEB;
+    color: #cfe2f3;
     /* background-color: #17166E; */
     font-size: 32px;
     animation: fadein 4s;
@@ -69,10 +87,45 @@ body
     z-index: 1;
 }
 
+.contentWrapper
+{   width: 100%;
+    height: auto;
+    background-color: #cfe2f3;
+    padding-top: 50px;
+    padding-bottom: 50px;
+}
+
+#contentH2
+{   font-family: 'Oswald', sans-serif;
+    color: #17166E;
+    font-size: 2.25em;
+    width: 85%;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+}
+
+.contentLine
+{   width: 85%;
+    color: #17166E;
+    border: 2px solid;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.infoContainer
+{   text-align: center;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    width: 75%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
 @media screen and (max-width: 660px)
 {   #headerH1
     {   font-size: 72px;
-        -webkit-text-stroke: 4px #CFCEEB;
+        -webkit-text-stroke: 4px #cfe2f3;
         letter-spacing: 3px;
     }
 }
@@ -80,7 +133,7 @@ body
 @media screen and (max-width: 400px)
 {   #headerH1
     {   font-size: 48px;
-        -webkit-text-stroke: 3px #CFCEEB;
+        -webkit-text-stroke: 3px #cfe2f3;
         letter-spacing: 3px;
     }
 }
@@ -88,7 +141,7 @@ body
 @media screen and (max-width: 280px)
 {   #headerH1
     {   font-size: 32px;
-        -webkit-text-stroke: 2px #CFCEEB;
+        -webkit-text-stroke: 2px #cfe2f3;
         letter-spacing: 2px;
     }
 }
